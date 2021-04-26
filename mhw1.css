@@ -1,0 +1,573 @@
+:root {
+  --answer-padding: 10px;
+}
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+ a,#news div, #details h1,.pointer,#ricerca button,#ricerca2 button{
+    cursor: pointer;
+  }
+  
+  a.button {
+    padding: 10px 15px;
+    border: 2px solid white;
+    border-radius: 100px;
+  }
+
+  #links a:hover,.highlights a:hover {
+    text-decoration:underline;
+  }
+  
+
+  #links a.button:hover {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+  }
+  body {
+    color: rgba(26, 26, 26, .7);
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  @media (max-width: 800px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  .button,
+  #details h1,
+  footer address,
+  header h1 strong,
+  #links,#news h1 {
+    font-family: 'Open Sans',serif;
+    font-style: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  #details {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  @media (max-width: 800px) {
+    #details {
+      flex-direction: column;
+    }
+  }
+  
+  #details div{
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  #details img{
+    max-width: 100%;
+    max-height: 50%;
+  }
+  #details h1 {
+    color: rgb(33, 86, 146);
+    font-weight: normal;
+    letter-spacing: 2px;
+  }
+  
+  footer {
+    background-color: #2e6be6;
+    padding: 25px;
+    text-align: center;
+  }
+  
+  footer p {
+    color: #ffffff;
+  }
+  
+  header h1 {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  
+  h1 a.button {
+    position: absolute;
+    top: 90%;
+    left: calc(50%-10px);
+    right: calc(50%-10px);
+    border: 0;
+    display: inline-block;
+  }
+  
+  h1 a.button:hover {
+    background-color: rgba(168, 218, 213, 0.75);
+    color: inherit;
+  }
+  @media (max-width: 800px){
+      h1 a.button{
+        display: none;
+      }
+  }
+  .img_podcast img{
+    width: 50%;
+    height: 250px;
+    margin-bottom: 5px;
+    margin-top: -20px;
+  }
+  .podcast div{
+    width: 100%;
+    height: 150px;
+    padding: var(--answer-padding);
+    margin: 20px;
+
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+  }
+
+  .podcast div a img{
+    width: 100%;
+    max-height: 100%;
+  }
+  .podcast div a{
+    width: 17%;
+    height: 100%;
+  }
+  .podcast div p{
+    text-align: left;
+    margin-left: 14px;
+    width: 83%;
+  }
+  .podcast div a img:hover{
+    border: 5px solid  rgb(13, 43, 77);
+  }
+  @media (max-width: 800px){
+    .podcast div p{
+      font-size: 10px;
+      margin-top: 0px;
+    }
+    .podcast h1{
+      font-size: 14px;
+    }
+    .img_podcast img{
+      
+      height: 130px;
+    }
+}
+  .img_highlights img{
+    width: 80%;
+    height: 250px;
+    margin-bottom: 5px;
+    margin-top: -20px;
+  }
+  .highlights div{
+    width: calc(28% - 2*var(--answer-padding));
+    padding: var(--answer-padding);
+    margin: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .highlights div h1,.podcast div h1{
+    font-size: 1.25em;
+    margin-bottom: 5px;
+    color: rgb(33, 86, 146);
+    font-family: "Open Sans Condensed",serif;
+  } 
+  .highlights div img{
+    max-width: 100%;
+    max-height: 100%;
+    border: 7px solid rgb(13, 43, 77);
+    
+  } 
+  .highlights div a{
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 10px;
+    background-color: rgb(33, 86, 146) ;
+    border-radius: 10px;
+    color: white;
+    height: 23px;
+  } 
+
+  @media(max-width: 800px){
+    .highlights div{
+      width: calc(39% - 2*var(--answer-padding));
+      margin: 15px;
+    }
+    .highlights div h1, .podcast div h1{
+      font-size: 14px;
+    } 
+    .highlights div img{
+      border: 4px solid rgb(13, 43, 77);
+    }
+    .highlights div a{
+      font-size: 12px;
+      margin-top: 6px;
+      height: 17px;
+      margin-left: 22%;
+      margin-right: 22%;
+    }
+    .img_highlights img{
+      height: 150px;
+    }
+  }
+   header.head  {
+    color: white;
+    background-image: url(img/immagine_header.jpg);
+    background-size:cover;
+    background-position: center;
+    height: 600px;
+    position: relative;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  header {
+    color: white;
+    background-color: rgb(32, 91, 201);    
+    background-position: center;
+    height: 80px;
+    position: relative;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 800px) {
+    header.head {
+      height: 200px;
+      line-height: 1.2;
+    }
+  }
+
+  header.head::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  header h1 {
+    font-weight: normal;
+    text-align: center;
+    z-index: 1;
+  }
+  
+  header h1 a {
+    /*font-size: 15px;*/
+    font-size: 1em;
+  }
+  
+  @media (max-width: 800px) {
+    header h1 strong {
+      font-size: 2em;
+      letter-spacing: 4px;
+    }
+  }
+  
+  header nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  
+    /*font-size: 14px;*/
+    font-size: .875em;
+    padding: 20px;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #links #spotify{
+    width: 25px;
+    height: 25px;
+    margin-bottom: -5px;
+  }
+  #menu {
+    display: none;
+  }
+  
+  #menu div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+  }
+  
+  @media (max-width: 800px) {
+    #links {
+      display: none;
+    }
+  
+    #menu {
+      display: block;
+    }
+  }
+
+  #news{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+  }
+
+  @media (max-width: 800px) {
+    #news {
+      flex-direction: column;
+      
+    }
+  }
+
+  #news img{
+        max-width: 100%;
+        max-height: 100%;
+      }
+    
+
+  #news h5{
+    font-family: 'Open Sans', serif;
+    font-weight: normal;
+    font-style: normal;
+    color:#333;
+    font-size: 14px;
+    margin-top: 5px; 
+    }
+
+  #news div{
+    border-radius: 7px;
+    background-color: rgb(235, 230, 230);
+    margin: 10px 10px;
+    }
+
+  #links a {
+    margin: 15px;
+  }
+
+  .preferiti div{
+    width: calc(15% - 2*var(--answer-padding));
+    background-color: #f4f4f4;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    padding: var(--answer-padding);
+    margin: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .preferiti div span{
+    display: flex;
+    justify-content:right;
+    width: 25px;
+    height: 25px;
+    z-index: 1;
+  }
+  .preferiti div span img{
+    width: 100%;
+    height: 100%;
+  }
+  .preferiti div h1{
+    margin-top: -7px;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  @media(max-width: 800px){
+    .preferiti div{
+      width: calc(25% - 2*var(--answer-padding));
+    }
+
+    .preferiti div span{
+      width: 20px;
+      height: 20px;
+    }
+
+    .preferiti div h1{
+      margin-top: -1px;
+      margin-bottom: 10px;
+      font-size: 12px;
+    }
+  }
+  .leghe, .preferiti,.highlights,.podcast{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .leghe div{
+    width: calc(20% - 2*var(--answer-padding));
+    background-color: #f4f4f4;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    padding: var(--answer-padding);
+    margin: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .leghe div span{
+    display: flex;
+    justify-content:right;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+  }
+  .leghe div span img{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .leghe div h1{
+    margin-top:-15px;
+    margin-bottom: 5px;
+  } 
+
+  @media(max-width: 800px){
+    .leghe div{
+      width: calc(37% - 2*var(--answer-padding));
+      margin: 15px;
+    }
+    .leghe div span{
+      width: 35px;
+      height: 35px;
+    }
+    .leghe div h1{
+      margin-top:-4px;
+      font-size: 16px;
+    } 
+    .leghe div p{
+      font-size: 14px;
+    }
+  }
+  #logo {
+    /*font-size: 40px;*/
+    font-size: 2em;
+    
+  }
+  
+  @media (max-width: 800px) {
+      #logo {
+        font-size: 1.5em;
+      }
+  }
+  
+  #main p {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 125px;
+    width: 60%;
+    line-height: 1em;
+  }
+  
+  @media (max-width: 800px) {
+    #main p {
+      width: 90%;
+      margin-bottom: 2em;
+    }
+  }
+  
+  #main h1 {
+    /*font-size: 28px;*/
+    font-size: 1.75em;
+    font-weight: normal;
+    color: rgba(26,26,26,.9);
+  }
+  
+  p {
+    /*line-height: 32px;*/
+    line-height: 2em;
+    color: #686868;
+  }
+
+  #ultime_news p{
+      display: block;
+      background-color: #2e6be6;
+      color: #ffffff;
+      text-align:left;
+      font-size: 1.50em;
+      font-family: "Open Sans Condensed",serif;
+      border-radius: 3px;
+  }
+
+  #ricerca{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2e6be6;
+    color: #ffffff;
+    font-size: 1.25em;
+    font-family: "Open Sans Condensed",serif;
+    border-radius: 3px;
+    padding: 20px;
+    height: 30px;
+  }
+  #ricerca2
+  {
+    background-color: #2e6be6;
+    color: #ffffff;
+    font-size: 1.25em;
+    font-family: "Open Sans Condensed",serif;
+    border-radius: 3px;
+    padding: 20px;
+    height: 30px;
+    margin-top: -40px;
+  }
+  #ricerca input,#ricerca2 input{
+    height:20px;
+    width: 200px;
+    border: none;
+  }
+
+  button:focus,input:focus {
+    outline:none;
+  }
+  #ricerca button,#ricerca2 button{
+    height:22px;
+    margin-left: -5px;
+    background-color: #88aef8;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    box-shadow: none;
+  }
+  .submit img{
+    max-height: 80%;
+    max-width: 90%; 
+    margin-bottom: -4px;
+  }
+  @media(max-width:800px)
+  {
+    #ricerca input,#ricerca2 input{
+      width: 120px;
+    }
+    #ricerca h1{
+      font-size: 16px;
+    }
+    #ricerca2{
+      margin-top: 0px;
+    }
+  }
+  section  {
+    margin: 80px 125px;
+    text-align: center;
+  }
+ 
+  @media (max-width: 800px) {
+    section {
+      margin: 40px 10px;
+    }
+  }
+
+  .hidden{
+    display: none !important;
+  }
